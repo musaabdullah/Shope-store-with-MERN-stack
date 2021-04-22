@@ -4,11 +4,13 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="app">
       <Router>
         {/* Navbar */}
+        <Navbar />
         {/* SideDrawer */}
         {/* Backdrop */}
         <main>

@@ -1,7 +1,7 @@
 import React from "react";
-
+import "./CartScreen.css";
 function CartScreen() {
-  return <div></div>;
+  return <div className="cartscreen">Cart Screen</div>;
 }
 
 export default CartScreen;
