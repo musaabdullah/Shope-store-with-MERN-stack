@@ -1,14 +1,25 @@
 import "./App.css";
 import react from "react";
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="app">
-      {/* Navbar */}
-      {/* SideDrawer */}
-      {/* Backdrop */}
-      {/* HomeScreen */}
-      {/* ProductScreen */}
-      {/* CartScreen */}
+      <Router>
+        {/* Navbar */}
+        {/* SideDrawer */}
+        {/* Backdrop */}
+        <main>
+          <Switch>
+            <Route exact path="/" component={HomeScreen} />
+            <Route exact path="/product/:id" component={ProductScreen} />
+            <Route exact path="/cart" component={CartScreen} />
+          </Switch>
+        </main>
+        {/* ASANSAO Aman password */}
+      </Router>
     </div>
   );
 }
