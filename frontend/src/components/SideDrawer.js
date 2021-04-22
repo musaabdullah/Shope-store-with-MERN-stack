@@ -1,7 +1,12 @@
 import React from "react";
+import "./SiderDrawer.css";
+function SideDrawer({ show }) {
+  const sideDrawerClass = ["sidedrawer"];
 
-function SideDrawer() {
-  return <div></div>;
+  if (show) {
+    sideDrawerClass.push("show");
+  }
+  return <div className={sideDrawerClass.join(" ")}></div>;
 }
 
 export default SideDrawer;

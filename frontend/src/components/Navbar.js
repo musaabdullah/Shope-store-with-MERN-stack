@@ -2,7 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import * as AI from "react-icons/ai";
-function Navbar() {
+function Navbar({ click }) {
   return (
     <nav className="navbar">
       {/* Logo */}
@@ -25,7 +25,7 @@ function Navbar() {
         </li>
       </ul>
       {/* Hamburger menu */}
-      <div className="hamburger__menu">
+      <div className="hamburger__menu" onClick={click}>
         <div></div>
         <div></div>
         <div></div>

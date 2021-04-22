@@ -5,14 +5,20 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import BackDrop from "./components/BackDrop";
+import SideDrawer from "./components/SideDrawer";
+import { useState, useEffect } from "react";
 function App() {
+  const [sideToggle, setSideToggle] = useState(false);
   return (
     <div className="app">
       <Router>
         {/* Navbar */}
-        <Navbar />
+        <Navbar click={() => setSideToggle(!sideToggle)} />
         {/* SideDrawer */}
+        <SideDrawer show={sideToggle} />
         {/* Backdrop */}
+        <BackDrop show={sideToggle} click={() => setSideToggle(!sideToggle)} />
         <main>
           <Switch>
             <Route exact path="/" component={HomeScreen} />
